@@ -1,6 +1,5 @@
 import type { APIRoute } from "astro";
-import { v2 as cloudinary } from 'cloudinary';
-import { resolveTypeReferenceDirective } from "typescript";
+import { v2 as cloudinary, type UploadApiResponse } from 'cloudinary';
 
 
 cloudinary.config({ 
@@ -12,7 +11,7 @@ cloudinary.config({
 
 const uploadStream = async (buffer: Uint8Array, options: {
     folder: string
-}) => {
+}): Promise<UploadApiResponse> => {
     return new Promise((resolve, reject) => {
         cloudinary.
             uploader.
@@ -38,10 +37,16 @@ export const POST: APIRoute = async ({ request }) => {
         folder: 'pdf'
     })
 
-    console.log(result)
+    const {
+        asset_id: id,
+        secure_url: url,
+        pages
+    } = result
 
-    // simulate delay
-    await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    return new Response("Hello world");
+    return new Response(JSON.stringify({
+        id,
+        url,
+        pages
+    }));
 }
