@@ -10,7 +10,8 @@ cloudinary.config({
 
 
 const uploadStream = async (buffer: Uint8Array, options: {
-    folder: string
+    folder: string,
+    ocr?: string,
 }): Promise<UploadApiResponse> => {
     return new Promise((resolve, reject) => {
         cloudinary.
@@ -34,7 +35,8 @@ export const POST: APIRoute = async ({ request }) => {
     const unit8Array = new Uint8Array(arrayBuffer);
 
     const result = await uploadStream(unit8Array, {
-        folder: 'pdf'
+        folder: 'pdf',
+        ocr: 'adv_ocr'
     })
 
     const {
