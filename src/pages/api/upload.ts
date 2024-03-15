@@ -1,4 +1,6 @@
 import type { APIRoute } from "astro";
+import fs from 'node:fs/promises';
+import path from 'node:path';
 import { v2 as cloudinary, type UploadApiResponse } from 'cloudinary';
 
 
@@ -7,6 +9,8 @@ cloudinary.config({
     api_key: '448284578425254', 
     api_secret: import.meta.env.API_SECRET
 });
+
+const outputDir = path.join(process.cwd(), 'public/text')
 
 
 const uploadStream = async (buffer: Uint8Array, options: {
@@ -42,9 +46,21 @@ export const POST: APIRoute = async ({ request }) => {
     const {
         asset_id: id,
         secure_url: url,
-        pages
+        pages,
+        info
     } = result
 
+    const data = info?.ocr?.adv_ocr?.data
+    const text = data.map((blocks: { textAnnotation: { description: string }[] }) => {
+        const annotations = blocks['textAnnotation'] ?? {}
+        const first = annotations[0] ?? {}
+        const content = first['description'] ?? ''
+        return content.trim()
+    }).filter(Boolean).join('\n')
+
+    // TODO: Meter esta info en una base de datos
+    // Mejor todavia en un vector y hacer los embeddings
+    fs.writeFile(`${outputDir}/${id}.txt`, text, 'utf-8')
 
     return new Response(JSON.stringify({
         id,

@@ -23,6 +23,8 @@
   },
   "devDependencies": {
     "flowbite": "^2.3.0",
-    "flowbite-svelte": "^0.44.23"
+    "flowbite-svelte": "^0.44.23",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
   }
 }
