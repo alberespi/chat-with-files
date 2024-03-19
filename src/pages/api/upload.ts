@@ -1,7 +1,9 @@
 import type { APIRoute } from "astro";
+//import { fileURLToPath } from "node:url";
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { v2 as cloudinary, type UploadApiResponse } from 'cloudinary';
+//import { LlamaCppEmbeddings } from "@langchain/community/embeddings/llama-cpp"
 
 
 cloudinary.config({ 
@@ -9,6 +11,8 @@ cloudinary.config({
     api_key: '448284578425254', 
     api_secret: import.meta.env.API_SECRET
 });
+
+
 
 const outputDir = path.join(process.cwd(), 'public/text')
 
@@ -51,16 +55,24 @@ export const POST: APIRoute = async ({ request }) => {
     } = result
 
     const data = info?.ocr?.adv_ocr?.data
-    const text = data.map((blocks: { textAnnotation: { description: string }[] }) => {
-        const annotations = blocks['textAnnotation'] ?? {}
+    const text = data.map((blocks: { textAnnotations: { description: string }[] }) => {
+        const annotations = blocks['textAnnotations'] ?? {}
         const first = annotations[0] ?? {}
         const content = first['description'] ?? ''
         return content.trim()
-    }).filter(Boolean).join('\n')
+      }).filter(Boolean).join('\n')
 
     // TODO: Meter esta info en una base de datos
     // Mejor todavia en un vector y hacer los embeddings
     fs.writeFile(`${outputDir}/${id}.txt`, text, 'utf-8')
+
+    // const embeddings = new OpenAIEmbeddings();
+    // const embeddedText = await embeddings.embedQuery(text)
+    // console.log(embeddedText)
+    // const  __dirname = path.dirname(fileURLToPath(import.meta.url));
+    // const embeddings = new LlamaCppEmbeddings({
+    //     modelPath: path.join(__dirname, "models", "gguf-llama2-q4_0.bin")
+    // })
 
     return new Response(JSON.stringify({
         id,
