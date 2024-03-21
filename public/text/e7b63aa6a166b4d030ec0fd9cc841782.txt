@@ -1,0 +1,117 @@
+ALBERTO
+ESPINOSA PÉREZ
+28703, Madrid Spain
++34 685296352, (+34)
+alberespi@gmail.com
+SUMMARY
+Highly motivated with a strong
+desire to take on new challenges.
+Solid work ethic, adaptability and
+exceptional interpersonal skills.
+Focused on working effectively and
+pursuing the organization's goals;
+adept at rapidly acquiring new
+abilities. Ambitious and motivated
+to pursue a professional career in
+artificial intelligence.
+SKILLS
+•
+Programming Languages: Java,
+C, C#, C++, .Net, Python, Bash.
+• Source and Version Control: Git,
+GitHub.
+• DevOps tools for deployment:
+Docker, Kubernetes, Terraform,
+Helm, Ansible.
+• Machine Learning and Deep
+Learning skills: Pandas, scikit-
+learn, TensorFlow, Keras.
+• Knowledgeable in Unity, Davinci
+Resolve, Photoshop, XML, React,
+JavaScript, SQL, German.
+• Problem Resolution
+⚫ Critical Thinking
+EXPERIENCE
+July 2022
+Current
+Cloud Operations Engineer Deimos Space | Tres Cantos, Spain
+•
+Configured computing, networking and security systems within cloud
+environment.
+Developed scripts to automate deployment and maintenance of public
+cloud resources.
+• Worked closely with systems analysts, engineers and programmers to
+understand limitations, develop capabilities and resolve software
+problems.
+.
+•
+Coordinated system installations, testing and code corrections.
+Responded to assistance requests from users and directed individuals
+through basic troubleshooting tasks.
+• Oversaw daily performance of computer systems.
+• Automated application build and deployment, driving efficiency of code
+development process.
+.
+•
+Developed procedures to automate code builds and deployments.
+Resolved customer issues by establishing workarounds and solutions to
+debug and create defect fixes.
+• Utilized Python to handle debugging and automation scripting tasks.
+September 2021 - July 2022
+Cloud Operations Intern Deimos Space | Tres Cantos, Spain
+•
+•
+Configured computing, networking and security systems within cloud
+environment.
+Communicated with clients to understand system requirements.
+Developed scripts to automate deployment and maintenance of public
+cloud resources.
+Utilized Python to handle debugging and automation scripting tasks.
+May 2021
+September 2021
+IT Consultant Intern Sotec Consulting | Madrid, Spain
+• Built website content and designs using .NET framework.
+•
+Developed mobile applications tailored to client requirements utilizing
+React-Native.
+EDUCATION
+•
+Planning & Organizing
+• Fluent English (C1)
+June 2023
+Bachelor of Science | Computer Science
+Universidad Autónoma De Madrid, Madrid, Spain
+ADDITIONAL
+INFORMATION
+• Basketball player (2010-2017):
+bronze medal at the 14/15
+championship, MVP of the 16/17
+season and assistant coach
+(2015-2017)
+• YouTube and Twitch
+channels about video games
+• First aid diploma at The Garda
+College Police Centre
+(Templemore, Ireland)
+• Personal blog about
+technology, AI and lifestyle.
+June 2017
+High School Diploma
+I.E.S. El Piles, Gijón, Spain
+• Summa cum laude graduate
+• 4 GPA
+LANGUAGES
+Spanish: First Language
+English:
+C1
+German:
+A2
+Elementary
+Advanced
+CERTIFICATIONS
+• Build a machine learning model with Python, Codecademy - 2023
+Handling missing data, Codecademy - 2022
+•
+• AI for earth monitoring, Future Learn - 2022
+•
+Digital Experience Scholarship, IBM and Santander - 2021

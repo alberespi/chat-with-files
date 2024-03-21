@@ -7,6 +7,7 @@ import OpenAI from 'openai'
 const openai = new OpenAI({
     apiKey: import.meta.env.OPENAI_API_KEY
 })
+
 export const GET: APIRoute = async ({ request }) => {
     const url = new URL(request.url)
     const id = url.searchParams.get('id')
